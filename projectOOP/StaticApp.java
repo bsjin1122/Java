@@ -1,3 +1,4 @@
+package projectOOP;
 class Foo{  
     public static String classVar = "I class var";
     public String instanceVar = "I instance var";

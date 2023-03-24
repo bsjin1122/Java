@@ -1,3 +1,4 @@
+package projectOOP;
 import javax.sql.rowset.spi.SyncResolver;
 
 class Foo{

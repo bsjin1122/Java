@@ -1,3 +1,4 @@
+package projectOOP;
 class Accounting{
     // 공급가액
     public double valueOfSupply;
