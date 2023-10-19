@@ -96,3 +96,47 @@ while(--k!=0){
  newVertex.next = temp2
 }
 ```
+
+---
+### 24강 삭제 <br>
+![img_9.png](img_9.png)<p></p>
+![img_10.png](img_10.png)
+```java
+Vertex cur = head
+
+while(--k!=0)
+  cur = cur.next
+
+Vertex tobedeleted = cur.next 
+
+cur.next = cur.next.next
+        
+delete tobedeleted
+
+
+```
+![img_11.png](img_11.png)
+![img_12.png](img_12.png)
+
+
+![img_13.png](img_13.png)
+
+---
+### 26강 java 구현 1: 객체 생성
+![img_14.png](img_14.png)
+- arrayList와 동일한 list 인터페이스를 구현하고 있다.
+- 메소드의 이름, 형태들은 거의 비슷하다. 
+- 사용방법은 같지만, 내부적인 구현 방법이 다르다. 
+- arrayList 배열을 사용함
+- linkedList 객체를 만들고, 객체와 객체를 연결하여 구현
+- 둘의 장단점이 서로 다르다. trade off가 존재한다. 
+
+### 내부구조
+![img_15.png](img_15.png)
+- node라는 이름의 객체를 만들 것
+- 각각의 node와 node가 link field라고 하는 것으로 연결되어 있다. link field는 변수이다. 
+- 다음 리스트가 누구인지에 대해 레퍼런스 값을 저장하고 있다. 
+- `HEAD`가 중요한 정보. 변수를 내부적으로 유지
+- `TAIL`유지하는 경우도, 유지하지 않는 경우도 있다. 제일 뒤에있는 노드가 누구인지를 적어둠
+- SIZE는 현재 몇 개의 element가 이 리스트 안에 포함되어 있는가
+

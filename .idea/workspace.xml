@@ -4,25 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6270aaaa-0c94-41ee-977d-3daa1c1a1639" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataStructure/ArrayList/ArrayList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataStructure/ArrayList/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataStructure/LinkedList/LinkedList.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataStructure/LinkedList/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataStructure/LinkedList/img_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataStructure/LinkedList/img_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataStructure/LinkedList/img_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataStructure/LinkedList/img_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataStructure/LinkedList/img_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataStructure/LinkedList/img_6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataStructure/LinkedList/img_7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    <list default="true" id="6270aaaa-0c94-41ee-977d-3daa1c1a1639" name="변경" comment="버전이 없는 파일 커밋">
+      <change afterPath="$PROJECT_DIR$/src/DataStructure/LinkedList/Note/img_10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataStructure/LinkedList/Note/img_11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataStructure/LinkedList/Note/img_12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataStructure/LinkedList/Note/img_13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataStructure/LinkedList/Note/img_14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataStructure/LinkedList/Note/img_15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataStructure/LinkedList/Note/img_8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataStructure/LinkedList/Note/img_9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataStructure/LinkedList/implementation/LinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataStructure/LinkedList/implementation/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructure/LinkedList/LinkedList.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructure/LinkedList/Note/LinkedList.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructure/LinkedList/img.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructure/LinkedList/Note/img.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructure/LinkedList/img_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructure/LinkedList/Note/img_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructure/LinkedList/img_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructure/LinkedList/Note/img_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructure/LinkedList/img_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructure/LinkedList/Note/img_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructure/LinkedList/img_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructure/LinkedList/Note/img_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructure/LinkedList/img_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructure/LinkedList/Note/img_5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructure/LinkedList/img_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructure/LinkedList/Note/img_6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructure/LinkedList/img_7.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructure/LinkedList/Note/img_7.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +61,11 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\SEOJIN\SJ_STUDY\DataStructure\src\DataStructure\LinkedList\Note" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="디폴트 작업">
