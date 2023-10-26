@@ -140,3 +140,13 @@ delete tobedeleted
 - `TAIL`유지하는 경우도, 유지하지 않는 경우도 있다. 제일 뒤에있는 노드가 누구인지를 적어둠
 - SIZE는 현재 몇 개의 element가 이 리스트 안에 포함되어 있는가
 
+---
+### 데이터 추가
+```java
+// 데이터 추가
+// List에서는 head라는 변수, 누가 그 리스트의 시작인지
+
+Vertex tmp = new Vertex(input); 
+tmp.next = head;
+head = tmp;
+```
