@@ -15,6 +15,12 @@ public class LinkedList {
             tail = head;
         }
     }
+
+    // removeLast
+    public Object removeLast() {
+        return remove(size-1);
+    }
+
     // 하나의 element가 하나의 객체
     // element == node == vertex
     private class Node{
@@ -112,6 +118,47 @@ public class LinkedList {
         temp = null;
         size--;
         return returnData;
+    }
+
+    // 33강 remove removeLast
+    public Object remove(int k){
+        if(k==0){
+            return removeFirst();
+        }
+        Node temp1 = node(k-1);
+        Node todoDeleted = temp1.next;
+        temp1.next = temp1.next.next;
+        Object returnData = todoDeleted.data;
+        if(todoDeleted == tail){
+            tail = temp1;
+        }
+        todoDeleted = null;
+        size--;
+        return returnData;
+    }
+
+    //size
+    public int size(){
+        return size;
+    }
+
+    public Object get(int k){
+        Node temp = node(k);
+        return temp;
+    }
+
+    public int indexOf(Object data){
+        Node temp = head;
+        int index = 0;
+        while(temp.data != data){
+            temp = temp.next;
+            index++;
+            if(temp == null){ // 가장 끝에 있는 노드에 도달
+                return -1; // 검색을 종료시킴
+            }
+        }
+        return index;
+
     }
 
 }
