@@ -2,7 +2,7 @@ package DataStructure.ArrayList;
 
 public class ArrayList {
     private int size = 0;
-    private Object[] elementData = new Object[100];
+    private Object[] elementData = new Object[100]; // 내부적으로 사용하는 배열이 값이 fix 되어있다. 배열의 한계를 넘어서면 x
 
 
     public boolean add(int index, Object element) {
@@ -84,7 +84,7 @@ public class ArrayList {
 
     }
 
-    class ListIterator{
+    public class ListIterator{
         private int nextIndex = 0;
         public Object next(){
             // Object returnData = elementData[nextIndex];

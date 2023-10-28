@@ -28,10 +28,39 @@ public class Main {
         // size
         //System.out.println(numbers.size());
         //System.out.println(numbers.get(1));
-        System.out.println(numbers.toString());
+        //System.out.println(numbers.toString());
 
         //indexOf 어떤 특정한 데이터가 어떤 위치에 있는지 검색하기
         //System.out.println(numbers.indexOf(30));
 
+
+        /* 36강 Iterator next
+        LinkedList.ListIterator i = numbers.listIterator();
+        System.out.println(i.next());
+        System.out.println(i.next());
+        System.out.println(i.hasNext()); // True
+        System.out.println(i.next());
+        System.out.println(i.hasNext()); // False
+
+        while(i.hasNext()){
+            System.out.println(i.next());
+        }*/
+
+        /* 38강 Iterator add
+        i.add(5); //첫번째 노드로 추가될 것
+        i.next();
+        i.add(15);
+        System.out.println(numbers);*/
+
+        LinkedList.ListIterator i = numbers.listIterator();
+        // 39강 Iterator remove
+        while(i.hasNext()){
+            if((int) i.next() == 20){
+                i.remove();
+            }
+        }
+        System.out.println(numbers);
+//        i.next();
+//        i.remove();
     }
 }
