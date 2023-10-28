@@ -176,9 +176,9 @@ public class LinkedList {
         // 호출되면 첫번째 노드의 값이 return 그다음 호출 시 return된 값을 가리킴
         public Object next() {
             lastReturned = next;
-            next = next.next;
+            next = next.next; //현재 next 노드의 다음 노드로
             nextIndex++;
-            return lastReturned.data;
+            return lastReturned.data; // 저장된 값을 리턴
         }
 
         public boolean hasNext(){

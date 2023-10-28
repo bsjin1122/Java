@@ -53,6 +53,14 @@ public class Main {
         System.out.println(numbers);*/
 
         LinkedList.ListIterator i = numbers.listIterator();
+        System.out.println(i.next());
+        System.out.println(i.hasNext());
+        System.out.println(i.next());
+        System.out.println(i.hasNext());
+        System.out.println(i.next());
+        System.out.println(i.hasNext());
+
+
         // 39강 Iterator remove
         while(i.hasNext()){
             if((int) i.next() == 20){
