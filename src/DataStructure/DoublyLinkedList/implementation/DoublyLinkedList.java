@@ -1,7 +1,7 @@
-package DataStructure.LinkedList.implementation;
+package DataStructure.DoublyLinkedList.implementation;
 
 // 객체 구현
-public class LinkedList {
+public class DoublyLinkedList {
     private Node head;
     private Node tail;
     private int size = 0;
@@ -9,6 +9,10 @@ public class LinkedList {
     public void addFirst(Object input) {
         Node newNode = new Node(input);
         newNode.next = head;
+        // 이전 head의 이전 노드를 newNode로 추가
+        if(head != null){
+            head.prev = newNode;
+        }
         head = newNode;
         size++;
         if(head.next == null){
@@ -26,9 +30,12 @@ public class LinkedList {
     private class Node{
         private Object data;
         private Node next;
+        private Node prev;
+
         public Node(Object input){
             this.data = input;
             this.next = null;
+            this.prev = null;
         }
         public String toString(){
             return String.valueOf(this.data);
@@ -42,32 +49,43 @@ public class LinkedList {
             addFirst(input);
         }else{
             tail.next = newNode;
+            newNode.prev = tail; // 새로운 노드의 이전 노드는 tail이다
             tail = newNode;
             size++;
         }
     }
 
-    // 29강 Node
     // public 노출시켜서는 안되는 메서드
+    // 양방향의 특성을 가짐
     Node node(int index){
-        Node x = head;
-        for(int i = 0; i < index; i++){
-            x = x.next;
+        if(index < size / 2 ){
+            Node x = head;
+            for(int i = 0; i < index; i++){
+                x = x.next;
+            }
+            return x;
+        }else{
+            Node x = tail;
+            for(int i = size()-1; i > index; i--){
+                x = x.prev;
+            }
+            return x;
         }
-        //x = x.next;
-        //x = x.next;
-        return x;
     }
 
     public void add(int k, Object input){
         if(k == 0){
             addFirst(input);
         }else{
-            Node temp1 = node(k-1);
+            Node temp1 = node(k-1); //node메소드는 어떤 변화가 있었는지
             Node temp2 = temp1.next;
             Node newNode = new Node(input);
             temp1.next = newNode;
             newNode.next = temp2;
+            if(temp2 != null){
+                temp2.prev = newNode;
+            }
+            newNode.prev = temp1;
             size++;
             if(newNode.next == null){
                 tail = newNode;
@@ -116,18 +134,24 @@ public class LinkedList {
         head = head.next;
         Object returnData = temp.data;
         temp = null;
+        if(head != null){
+            head.prev = null;
+        }
         size--;
         return returnData;
     }
 
     // 33강 remove removeLast
-    public Object remove(int k){
+    public Object remove(int k){ //인덱스 값
         if(k==0){
             return removeFirst();
         }
-        Node temp1 = node(k-1);
+        Node temp1 = node(k-1); //2번 찾는 비효율성 생김
         Node todoDeleted = temp1.next;
         temp1.next = temp1.next.next;
+        if(temp1.next != null){
+          temp1.next.prev = temp1;
+        }
         Object returnData = todoDeleted.data;
         if(todoDeleted == tail){
             tail = temp1;
@@ -171,7 +195,7 @@ public class LinkedList {
 
         ListIterator(){
             next = head;
-            nextIndex = 0;
+            nextIndex = 0; //초기상태 0임
         }
 
         // 호출되면 첫번째 노드의 값이 return 그다음 호출 시 return된 값을 가리킴
@@ -180,6 +204,22 @@ public class LinkedList {
             next = next.next; //현재 next 노드의 다음 노드로
             nextIndex++;
             return lastReturned.data; // 저장된 값을 리턴
+        }
+
+        // 이전 노드로 가져올 것이 남아있는가
+        public boolean hasPrevious(){
+            return nextIndex > 0;
+        }
+
+        // iterator has previous 이전 노드의 값
+        public Object previous(){
+            if(next == null){
+                lastReturned = next = tail;
+            }else{
+                lastReturned = next = next.prev;
+            }
+            nextIndex--;
+            return lastReturned.data;
         }
 
         public boolean hasNext(){
@@ -195,7 +235,13 @@ public class LinkedList {
                 newNode.next = next;
             }else{
                 lastReturned.next = newNode;
-                newNode.next = next;
+                newNode.prev = lastReturned;
+                if(next != null){
+                    newNode.next = next;
+                    next.prev = newNode;
+                }else{
+                    tail = newNode;
+                }
             }
             lastReturned = newNode;
             nextIndex++;
@@ -203,10 +249,35 @@ public class LinkedList {
         }
 
         public void remove(){
-            if(nextIndex == 0){
+            if(nextIndex == 0){// 한번도 next 호출하지 않은 상태
+                // lastReturned == null 도 가능
                 throw new IllegalStateException();
             }
-            LinkedList.this.remove(nextIndex-1);
+            Node n = lastReturned.next;
+            Node p = lastReturned.prev;
+            // 첫번째 노드 삭제 시
+            if(p == null){
+               head = n;
+               head.prev = null;
+               lastReturned = null;
+            }else{
+                p.next = next;
+                lastReturned.prev = null;
+            }
+            // 중간
+            if(n == null){
+                tail = p;
+                tail.next = null;
+            }else{
+                next.prev = p;
+            }
+            // 끝에서 삭제할 경우
+            if(next == null){
+                lastReturned = tail;
+            }else{
+                lastReturned = next.prev;
+            }
+            size--;
             nextIndex--;
         }
     }
