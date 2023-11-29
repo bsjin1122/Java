@@ -1,15 +1,21 @@
 package Test;
 
 public class CallByValue {
-    public static void main(String[] args) {
-        int num = 10;
-        System.out.println("1. " + num);
-        changeValue(num); // 기본 데이터 타입을 메서드에 전달할 때는 값 자체가 복사되어 전달되며,
-        // 호출된 메서드에서 값을 변경해도 호출한 곳의 변수는 영향을 받지 않는다.
-        System.out.println("2. " + num);
+    public static void swap(int a, int b){
+        int tmp = a;
+        a = b;
+        b = tmp;
     }
 
-    public static void changeValue(int x) {
-            x = 20;
+    public static void main(String[] args) {
+        int a = 1;
+        int b = 2;
+        System.out.println(a + " " + b); // 1  2
+        swap(a, b);
+        System.out.println(a + " " + b); // 1  2
+        // 함수 호출 시 전달되는 변수의 값을 복사하여 함수의 인자로 전달한다.
+        // JAVA의 경우 함수에 전달되는 인자에 데이터 타입에 따라 (기본형/참조형) 함수 호출 방식이 달라진다.
     }
 }
+
+
