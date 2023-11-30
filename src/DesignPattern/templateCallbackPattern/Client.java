@@ -9,7 +9,7 @@ public class Client {
             public void runStrategy() {
                 System.out.println("총! 총조종총 총! 총!");
             }
-        });
+        }.toString());
 
         System.out.println();
 
@@ -18,7 +18,7 @@ public class Client {
             public void runStrategy() {
                 System.out.println("칼! 카가갈 칼! 칼!");
             }
-        });
+        }.toString());
 
         System.out.println();
 
@@ -27,6 +27,6 @@ public class Client {
             public void runStrategy() {
                 System.out.println("도끼! 도독...도도독 독끼!");
             }
-        });
+        }.toString());
     }
 }
