@@ -15,3 +15,6 @@ public class Driver {
        System.out.println(car.getTireBrand());
     }
 }
+// DI는 외부에 있는 의존 대상을 주입하는 것을 말한다.
+// 의존 대상을 구현하고 배치할 때, SOLID와 응집도는 높이고, 결합도는 낮추라는기본 원칙에 충실해야 한다.
+// 그래야 프로젝트의 구현과 유지보수가 수월해진다.
