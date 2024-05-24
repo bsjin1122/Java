@@ -1,3 +1,9 @@
 {
-    "java.debug.settings.onBuildFailureProceed": true
-}
+    "java.debug.settings.onBuildFailureProceed": true,
+    "files.encoding": "utf8",
+    "files.autoGuessEncoding": true,
+    "code-runner.executorMap": {
+        "java": "cd $dir && javac $fileName -encoding utf-8 && java $fileNameWithoutExt"
+    },
+    "java.compile.nullAnalysis.mode": "automatic"
+} 
