@@ -1,3 +1,5 @@
+package etc;
+
 public class GenericType {
     public static void main(String[] args) {
         KeyValue<String, Integer> kv1 = new KeyValue<>();

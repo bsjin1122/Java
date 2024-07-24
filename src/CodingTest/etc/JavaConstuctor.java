@@ -1,3 +1,5 @@
+package etc;
+
 public class JavaConstuctor {
     public static void main(String[] args) {
         // 클래스의 객체 생성

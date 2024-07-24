@@ -1,3 +1,5 @@
+package etc;
+
 import java.util.*;
 
 public class J0301_두배열합치기 {

@@ -1,3 +1,5 @@
+package etc;
+
 public class PG_12911 {
     public static void main(String[] args) {
         int n =  15;

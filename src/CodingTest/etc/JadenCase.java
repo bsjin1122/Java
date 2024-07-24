@@ -1,3 +1,5 @@
+package etc;
+
 public class JadenCase {
     public static void main(String[] args) {
         String s = "  the school sesac ";//"3people unFollowed me";

@@ -1,3 +1,5 @@
+package etc;
+
 import java.util.HashSet;
 
 public class J0804_HashSet {

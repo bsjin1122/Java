@@ -1,3 +1,5 @@
+package etc;
+
 public class CoupleDelete {
     public static void main(String[] args) {
         StringBuilder sb = new StringBuilder();

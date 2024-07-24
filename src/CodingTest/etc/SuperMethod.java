@@ -1,3 +1,5 @@
+package etc;
+
 class One{
     One(){
         this(3);

@@ -1,3 +1,5 @@
+package etc;
+
 class CloseTest implements AutoCloseable{
     String resource;
     CloseTest(String resource){

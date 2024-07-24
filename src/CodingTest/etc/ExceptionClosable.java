@@ -1,3 +1,5 @@
+package etc;
+
 public class ExceptionClosable {
     public static void main(String[] args) {
         // 1. 리소스를 사용하고, finally 에서 리소스 수동 해제하기

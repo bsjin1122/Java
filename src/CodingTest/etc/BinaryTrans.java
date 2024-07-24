@@ -1,3 +1,5 @@
+package etc;
+
 public class BinaryTrans {
     public static void main(String[] args) {
         String s = "110010101001";
