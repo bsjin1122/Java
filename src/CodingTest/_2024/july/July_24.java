@@ -1,4 +1,4 @@
-package etc;
+package _2024.july;
 
 import java.util.Arrays;
 
