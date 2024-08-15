@@ -1,4 +1,4 @@
-package creational;
+package creational.singleton;
 
 /* 싱글톤 패턴 : 클래스의 인스턴스가 하나만 존재하도록 하고, 전역적으로 접근할 수 있게 합니다. */
 public class BasicSingleton {
